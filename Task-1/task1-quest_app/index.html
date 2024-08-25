@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quest App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <h1>Yavuzlar Quiz</h1>
+      <button
+        id="admin-panel"
+        class="btn"
+        style="text-align: center; font-size: larger"
+      >
+        Yavuzlar Soru Uygulaması Yönetim Paneli
+      </button>
+      <button
+        id="question-list"
+        class="btn"
+        style="text-align: center; font-size: larger"
+      >
+        <i>Soru Listele</i>
+      </button>
+
+      <div id="admin-panel-section" class="hide">
+        <input type="text" id="search-box" placeholder="Soru Ara" />
+        <ul id="question-list-admin"></ul>
+      </div>
+
+      <div class="quiz hide">
+        <h2 style="color: black" id="question">question goes here</h2>
+        <div id="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

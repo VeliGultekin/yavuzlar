@@ -224,6 +224,7 @@ const newAnswer1 = document.getElementById("new-answer-1");
 const newAnswer2 = document.getElementById("new-answer-2");
 const newAnswer3 = document.getElementById("new-answer-3");
 const newAnswer4 = document.getElementById("new-answer-4");
+const newQuestionDifficulty = document.getElementById("new-question-difficulty");
 
 submitNewQuestionBtn.addEventListener("click", () => {
   const questionText = newQuestionText.value.trim();
@@ -231,7 +232,8 @@ submitNewQuestionBtn.addEventListener("click", () => {
   const answer2 = newAnswer2.value.trim();
   const answer3 = newAnswer3.value.trim();
   const answer4 = newAnswer4.value.trim();
-  
+  const difficulty = newQuestionDifficulty.value;
+
   if (questionText === "" || answer1 === "" || answer2 === "" || answer3 === "" || answer4 === "") {
     alert("Tüm alanları doldurun.");
     return;
@@ -246,6 +248,7 @@ submitNewQuestionBtn.addEventListener("click", () => {
 
   questions.push({
     question: questionText,
+    difficulty: difficulty,
     answers: answers
   });
 
@@ -258,5 +261,22 @@ submitNewQuestionBtn.addEventListener("click", () => {
   newAnswer4.value = "";
 
   showAdminPanel();
-
 });
+
+function showAdminPanel() {
+  questionListAdmin.innerHTML = "";
+  questions.forEach((q, index) => {
+    const listItem = document.createElement("div");
+    listItem.classList.add("question-container");
+    listItem.innerHTML = `
+        <div class="question-text">
+          ${index + 1}. ${q.question} (Zorluk: ${q.difficulty})
+        </div>
+        <div class="button-container">
+          <button class="btn" onclick="editQuestion(${index})">Düzenle</button>
+          <button class="btn" onclick="deleteQuestion(${index})">Sil</button>
+        </div>
+      `;
+    questionListAdmin.appendChild(listItem);
+  });
+}

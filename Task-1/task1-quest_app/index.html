@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <button id="home-btn">Anasayfa</button>
     <div class="app">
       <h1>Yavuzlar Quiz</h1>
       <button
@@ -28,6 +29,38 @@
       <div id="admin-panel-section" class="hide">
         <input type="text" id="search-box" placeholder="Soru Ara" />
         <ul id="question-list-admin"></ul>
+
+        <div id="new-question-form">
+          <h3>Yeni Soru Ekle</h3>
+          <input
+            type="text"
+            id="new-question-text"
+            placeholder="Soru metnini girin"
+          />
+          <div id="new-question-answers">
+            <input
+              type="text"
+              id="new-answer-1"
+              placeholder="Doğru Cevap"
+            /><br />
+            <input
+              type="text"
+              id="new-answer-2"
+              placeholder="Yanlış Cevap 1"
+            /><br />
+            <input
+              type="text"
+              id="new-answer-3"
+              placeholder="Yanlış Cevap 2"
+            /><br />
+            <input
+              type="text"
+              id="new-answer-4"
+              placeholder="Yanlış Cevap 3"
+            /><br />
+          </div>
+          <button id="submit-new-question">Ekle</button>
+        </div>
       </div>
 
       <div class="quiz hide">

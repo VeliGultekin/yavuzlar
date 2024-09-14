@@ -1,6 +1,6 @@
 body {
   font-family: "Verdana", sans-serif;
-  background-color: #e0e0e0;
+  background-color: #13404d;
   margin: 0;
   padding: 0;
 }
@@ -19,16 +19,16 @@ h2 {
 
 button {
   padding: 12px 25px;
-  background-color: goldenrod;
+  background-color: #469280;
   color: white;
-  border: 1px solid #007bff;
+  border: 1px solid #13404d;
   cursor: pointer;
   margin: 15px 0;
 }
 
 button:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: #1d5a67;
+  border-color: #1d5a67;
 }
 
 .question-list-section,
@@ -67,8 +67,8 @@ form label {
 .login {
   width: 220px;
   height: 220px;
-  background-color: #e8e8e8;
-  border: 2px solid #333;
+  background-color: #2f7a78;
+  border: 2px solid #2f7a78;
   padding: 25px;
   margin: 25px;
   box-shadow: 6px 6px 12px;
